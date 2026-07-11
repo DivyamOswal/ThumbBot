@@ -1,8 +1,6 @@
 import { MenuIcon, XIcon, SparklesIcon, ArrowRightIcon } from "lucide-react";
 import { useState } from "react";
 import { motion } from "motion/react";
-import { navlinks } from "../data/navlinks";
-import type { INavLink } from "../types";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
@@ -28,6 +26,7 @@ export default function Navbar() {
                     <NavLink to={'/generate'} className={({isActive}) => `px-4 py-1.5 rounded-full transition-colors ${isActive ? "bg-blue-600 text-white" : "text-slate-300 hover:text-white"}`}>Generate</NavLink>
                     <NavLink to={'/my-generation'} className={({isActive}) => `px-4 py-1.5 rounded-full transition-colors ${isActive ? "bg-blue-600 text-white" : "text-slate-300 hover:text-white"}`}>My Generations</NavLink>
                     <NavLink to={'/contact'} className={({isActive}) => `px-4 py-1.5 rounded-full transition-colors ${isActive ? "bg-blue-600 text-white" : "text-slate-300 hover:text-white"}`}>Contact</NavLink>
+                    <NavLink to={'/about'} className={({isActive}) => `px-4 py-1.5 rounded-full transition-colors ${isActive ? "bg-blue-600 text-white" : "text-slate-300 hover:text-white"}`}>About</NavLink>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -54,6 +53,7 @@ export default function Navbar() {
                     <NavLink onClick={()=> setIsOpen(false)} to={'/generate'} className={({isActive}) => `text-2xl font-medium transition-colors ${isActive ? "text-blue-400" : "text-slate-200 hover:text-white"}`}>Generate</NavLink>
                     <NavLink onClick={()=> setIsOpen(false)} to={'/my-generation'} className={({isActive}) => `text-2xl font-medium transition-colors ${isActive ? "text-blue-400" : "text-slate-200 hover:text-white"}`}>My Generations</NavLink>
                     <NavLink onClick={()=> setIsOpen(false)} to={'/contact'} className={({isActive}) => `text-2xl font-medium transition-colors ${isActive ? "text-blue-400" : "text-slate-200 hover:text-white"}`}>Contact</NavLink>
+                    <NavLink onClick={()=> setIsOpen(false)} to={'/about'} className={({isActive}) => `text-2xl font-medium transition-colors ${isActive ? "text-blue-400" : "text-slate-200 hover:text-white"}`}>About</NavLink>
                 </div>
 
                 <button onClick={() => { setIsOpen(false); navigate('/login') }} className="flex items-center gap-1.5 px-8 py-3 bg-blue-600 hover:bg-blue-500 active:scale-95 transition-all rounded-lg text-white font-medium">

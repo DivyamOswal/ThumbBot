@@ -4,7 +4,6 @@ import TestimonialSection from "../sections/TestimonialSection";
 import PricingSection from "../sections/PricingSection";
 import ContactSection from "../sections/ContactSection";
 import CTASection from "../sections/CTASection";
-import TiltedImage from "../components/TiltImage";
 
 export default function HomePage() {
     return (

@@ -325,7 +325,7 @@ export const yt_html = `
                             <div class="flex gap-3 mt-3">
                                 <img src="https://i.pravatar.cc/36?7" class="rounded-full h-9 w-9" />
                                 <div>
-                                    <h3 class="font-semibold line-clamp-2">React 18 new features — what's changed?</h3>
+                                    <h3 class="font-semibold line-clamp-2">React 18 new features -what's changed?</h3>
                                     <p class="text-sm text-gray-400">Frontend Focus</p>
                                     <p class="text-sm text-gray-400">10K views • 6 days ago</p>
                                 </div>
@@ -337,7 +337,7 @@ export const yt_html = `
                             <div class="flex gap-3 mt-3">
                                 <img src="https://i.pravatar.cc/36?8" class="rounded-full h-9 w-9" />
                                 <div>
-                                    <h3 class="font-semibold line-clamp-2">Top 20 music tracks this month — playlist</h3>
+                                    <h3 class="font-semibold line-clamp-2">Top 20 music tracks this month -playlist</h3>
                                     <p class="text-sm text-gray-400">Music Hub</p>
                                     <p class="text-sm text-gray-400">1.1M views • 3 days ago</p>
                                 </div>
@@ -349,7 +349,7 @@ export const yt_html = `
                             <div class="flex gap-3 mt-3">
                                 <img src="https://i.pravatar.cc/36?9" class="rounded-full h-9 w-9" />
                                 <div>
-                                    <h3 class="font-semibold line-clamp-2">Top 20 music tracks this month — playlist</h3>
+                                    <h3 class="font-semibold line-clamp-2">Top 20 music tracks this month -playlist</h3>
                                     <p class="text-sm text-gray-400">Music Hub</p>
                                     <p class="text-sm text-gray-400">1.1M views • 3 days ago</p>
                                 </div>
