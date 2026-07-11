@@ -15,10 +15,11 @@ export default function Navbar() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
-                <Link to={'/'} className="flex items-center gap-2.5">
-                    <span className="text-lg font-semibold text-white tracking-tight">
-                        ThumbBot
+                <Link to={'/'} className="flex items-center gap-2 shrink-0">
+                    <span className="flex items-center justify-center size-8 rounded-lg bg-blue-600/15 border border-blue-800 shrink-0">
+                        <SparklesIcon size={14} className="text-blue-400" />
                     </span>
+                    <span className="text-white font-semibold text-base">ThumbBot</span>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-1 text-sm font-medium bg-white/5 border border-white/10 rounded-full p-1">

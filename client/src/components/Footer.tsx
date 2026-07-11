@@ -15,10 +15,11 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
             >
-                <Link to={'/'} className="flex items-center gap-2">
-                    <span className="flex items-center justify-center size-8 rounded-lg bg-blue-600/15 border border-blue-800">
-                        ThumbBot
+                <Link to={'/'} className="flex items-center gap-2 shrink-0">
+                    <span className="flex items-center justify-center size-8 rounded-lg bg-blue-600/15 border border-blue-800 shrink-0">
+                        <SparklesIcon size={14} className="text-blue-400" />
                     </span>
+                    <span className="text-white font-semibold text-base">ThumbBot</span>
                 </Link>
                 {footerData.map((section, index) => (
                     <div key={index}>
@@ -42,7 +43,7 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
             >
-                <p className="max-w-60">Making every customer feel valuedno matter the size of your audience.</p>
+                <p className="max-w-60">Making every customer feel valued  no matter the size of your audience.</p>
                 <div className="flex items-center gap-4 mt-3">
                     <a href="https://dribbble.com" target="_blank" rel="noreferrer">
                         <DribbbleIcon className="size-5 hover:text-blue-400 transition-colors" />
