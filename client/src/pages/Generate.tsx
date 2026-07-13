@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { colorSchemes, type AspectRatio, type IThumbnail, type ThumbnailStyle } from '../assets/assets'
+import { colorSchemes, dummyThumbnails, type AspectRatio, type IThumbnail, type ThumbnailStyle } from '../assets/assets'
 import AspectRatioSelector from '../components/AspectRationSelector'
 import StyleSelector from '../components/StyleSelector'
 import ColorSchemeSelector from '../components/ColorSchemeSelector'
-import { ImageIcon } from 'lucide-react'
+import PreviewPanel from '../components/PreviewPanel'
 
 
 const Generate = () => {
@@ -23,6 +23,25 @@ const Generate = () => {
         setLoading(true)
         // TODO: wire up actual generation API call
     }
+
+    const fetchThumbnail = async ()=>{
+        if(id){
+            const thumbnail : any = dummyThumbnails.find((thumbnail)=> thumbnail._id === id)
+            setThumbnail(thumbnail)
+            setAdditionalDetails(thumbnail.user_prompt)
+            setTitle(thumbnail.title)
+            setColorSchemeId(thumbnail.color_scheme)
+            setAspectRatio(thumbnail.aspect_ration)
+            setStyle(thumbnail.style)
+            setLoading(false)
+        }
+    }
+
+    useEffect(()=>{
+        if(id){
+            fetchThumbnail()
+        }
+    },[id])
 
   return (
     <div className='pt-24 min-h-screen'>
@@ -65,16 +84,15 @@ const Generate = () => {
                     </div>
                 </div>
                 {/* Right panel */}
-                <div className='p-6 rounded-2xl bg-slate-950 border border-slate-800 shadow-xl flex items-center justify-center min-h-96'>
-                    {thumbnail ? (
-                        <img src={thumbnail.imageUrl} alt={thumbnail.title} className='max-w-full max-h-full rounded-lg' />
-                    ) : (
-                        <div className='flex flex-col items-center gap-3 text-slate-500'>
-                            <ImageIcon className='size-10' />
-                            <p className='text-sm'>Your generated thumbnail will appear here</p>
-                        </div>
-                    )}
+               <div>
+                <div className='p-6 rounded-2xl bg-slate-950 border border-slate-800 shadow-xl'>
+                
+                <h2 className='text-lg font-semibold text-white mb-4'>
+                    Preview
+                </h2>
+                <PreviewPanel thumbnail={thumbnail} isLoading={loading} aspectRatio={aspectRatio}/>
                 </div>
+               </div>
             </div>
         </main>
     </div>
