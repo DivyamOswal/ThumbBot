@@ -2,12 +2,12 @@ import express from 'express'
 import { loginUser, logoutUser, registerUser, verifyUsr } from '../controllers/AuthController.js'
 import protect from '../middlewares/auth.js'
 
-const authRouter = express.Router()
+const AuthRouter = express.Router()
 
-authRouter.post('/register', registerUser)
-authRouter.post('/login', loginUser)
-authRouter.get('/verify', protect, verifyUsr)
-authRouter.post('/logout', protect, logoutUser)
+AuthRouter.post('/register', registerUser)
+AuthRouter.post('/login', loginUser)
+AuthRouter.get('/verify', protect, verifyUsr)
+AuthRouter.post('/logout', protect, logoutUser)
 
 
-export default authRouter
+export default AuthRouter
